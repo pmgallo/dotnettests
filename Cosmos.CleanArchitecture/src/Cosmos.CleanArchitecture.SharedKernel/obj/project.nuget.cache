@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "BGsUgDUB15iDVd1osprsFVydqf4W7RNPFb6voqmF8sSdn/oUPUw6nb5GqzDc0x9u1HHavWVSNY8wSKAEoZht6w==",
+  "success": true,
+  "projectFilePath": "G:\\code\\dotnettests\\dotnettests\\Cosmos.CleanArchitecture\\src\\Cosmos.CleanArchitecture.SharedKernel\\Cosmos.CleanArchitecture.SharedKernel.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\pgallo\\.nuget\\packages\\ardalis.specification\\6.1.0\\ardalis.specification.6.1.0.nupkg.sha512",
+    "C:\\Users\\pgallo\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
+    "C:\\Users\\pgallo\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

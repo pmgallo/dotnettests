@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "84yxta0zx8sP3MBrbKCkbKA40y+4Hhz9XjdOXKl7LnR8cs6UO/yLIPQGqRIbRv1GKwwtBCrG/zzYgohh8T5MBg==",
+  "success": true,
+  "projectFilePath": "G:\\code\\dotnettests\\dotnettests\\Cosmos.CleanArchitecture\\src\\Cosmos.CleanArchitecture.Core\\Cosmos.CleanArchitecture.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\pgallo\\.nuget\\packages\\ardalis.guardclauses\\4.0.1\\ardalis.guardclauses.4.0.1.nupkg.sha512",
+    "C:\\Users\\pgallo\\.nuget\\packages\\ardalis.result\\4.1.0\\ardalis.result.4.1.0.nupkg.sha512",
+    "C:\\Users\\pgallo\\.nuget\\packages\\ardalis.smartenum\\2.1.0\\ardalis.smartenum.2.1.0.nupkg.sha512",
+    "C:\\Users\\pgallo\\.nuget\\packages\\ardalis.specification\\6.1.0\\ardalis.specification.6.1.0.nupkg.sha512",
+    "C:\\Users\\pgallo\\.nuget\\packages\\autofac\\6.5.0\\autofac.6.5.0.nupkg.sha512",
+    "C:\\Users\\pgallo\\.nuget\\packages\\jetbrains.annotations\\2021.3.0\\jetbrains.annotations.2021.3.0.nupkg.sha512",
+    "C:\\Users\\pgallo\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
+    "C:\\Users\\pgallo\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
+    "C:\\Users\\pgallo\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512"
+  ],
+  "logs": []
+}
