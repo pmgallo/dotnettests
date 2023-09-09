@@ -7,7 +7,7 @@ public class AsyncTests
 {
     private static readonly Task<int> DoSomethingTask =  Task.FromResult(1);
 
-    private static Task<int> DoSomethingWithErrorTask()
+    private static Task<int> DoSomethingWithErrorTask() 
     {
         throw new Exception("This was intentionally thrown");
     }
