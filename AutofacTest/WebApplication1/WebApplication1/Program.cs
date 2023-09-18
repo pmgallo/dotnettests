@@ -63,6 +63,7 @@ public class AutofacBusinessModule : Module
         
         var assemblies = Directory.GetFiles(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "plugins"), "*.dll").Select(Assembly.LoadFrom).ToList();
         
+        //Escenario 1. Carga manualmente cada tipo que necuentra en los assemblies como instancia de IPizzaProvider. Este escenario se puede mejorar si en lugar de dejar explícito el tipo IPizzaProvider se usara AsImplementedInterfaces
         /* var discoverableRouteRegistrarTypes = 
             assemblies
             .SelectMany(x => x
@@ -75,15 +76,30 @@ public class AutofacBusinessModule : Module
         }
         */
         
-        //Escanea los assemblies y registra todos los tipos de datos asociados a sus respectivas interfaces
+        //Escenario 2: Escanea los assemblies y registra todos los tipos de datos asociados a sus respectivas interfaces. Mejora del escenario anterior
         /*
         assemblies.ForEach(assembly => builder.RegisterAssemblyTypes(assembly)
             .Where(t => t.Name.EndsWith(""))
             .AsImplementedInterfaces());
             */
         
-        assemblies.ForEach(assembly => 
-            builder.RegisterAssemblyModules(assembly));;
-
+        /*Escenario 3: Escanea los assemblies y carga los módulos. Esto delega la tarea de carga de las dependencias a los plugins, que no se si es buena idea*/
+        /* assemblies.ForEach(assembly => 
+            builder.RegisterAssemblyModules(assembly)); */
+            
+        
+        
+        /*Escenario 4: Carga el objecto PizzaProvidersContainer que tiene una lista de las implementaciones de IPizzaProvider que carga de los plugins*/
+        
+        builder
+            .RegisterFacadeWithDiscoverableSources<PizzaProvidersContainer, IPizzaProvider>()
+            .AsImplementedInterfaces()
+            .SingleInstance();
+        
+        foreach (var assembly in assemblies)
+        {
+            builder.RegisterDiscoverableTypes(assembly);
+        }
+        
     }
 }
