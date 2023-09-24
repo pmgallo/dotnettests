@@ -19,13 +19,27 @@
         </NavLink>
     </header>
 
-    <div class="content">
-        @Body
-    </div>
-
+   
+    <ErrorBoundary @ref="errorBoundary">
+        <ChildContent>
+            <div class="content">
+                @Body
+            </div>          
+        </ChildContent>
+        <ErrorContent>
+            <p class="errorUI">😈 A rotten gremlin got us. Sorry!</p>
+        </ErrorContent>
+    </ErrorBoundary>
     <footer>
         &copy; Blazing Pizza @DateTime.UtcNow.Year
     </footer>
-
-
 </div>
+
+@code {
+    private ErrorBoundary? errorBoundary;
+
+    protected override void OnParametersSet()
+    {
+        errorBoundary?.Recover();
+    }
+}

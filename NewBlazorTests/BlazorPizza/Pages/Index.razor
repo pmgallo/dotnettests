@@ -79,7 +79,14 @@
 @code {
     List<PizzaSpecial> specials = new();
     Order order => OrderState.Order;
-  
+
+    protected override Task OnParametersSetAsync()
+    {
+        return base.OnParametersSetAsync();
+    }
+    
+
+
     async Task RemovePizzaConfirmation(Pizza removePizza)
     {
         var messageParams = new

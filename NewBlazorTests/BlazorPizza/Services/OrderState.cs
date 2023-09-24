@@ -16,11 +16,15 @@ public class OrderState
     public static int GetNextOrderId()
     {
         return ++_orderId;
-    }  
-        
+    }
 
+
+    private int _pizzaCounter = 0;
     public void ShowConfigurePizzaDialog(PizzaSpecial special)
     {
+        if (_pizzaCounter++ > 3)
+            throw new InvalidOperationException("Too many pizzas selected");
+        
         ConfiguringPizza = new Pizza()
         {
             Special = special,
